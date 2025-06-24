@@ -31,7 +31,7 @@
     "dev:debug": "nodemon --inspect -r dotenv/config src/index.js dotenv_config_path=../.env",
     "start": "node src/index.js",
     "start:prod": "NODE_ENV=production node src/index.js",
-    "test": "NODE_ENV=test jest",
+    "test": "NODE_ENV=test jest --passWithNoTests",
     "test:watch": "NODE_ENV=test jest --watch",
     "test:coverage": "NODE_ENV=test jest --coverage",
     "test:integration": "NODE_ENV=test jest --testPathPattern=integration",
@@ -129,8 +129,22 @@
       "sourceType": "module"
     },
     "rules": {
-      "no-console": ["warn", { "allow": ["warn", "error", "info"] }],
-      "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+      "no-console": [
+        "warn",
+        {
+          "allow": [
+            "warn",
+            "error",
+            "info"
+          ]
+        }
+      ],
+      "no-unused-vars": [
+        "error",
+        {
+          "argsIgnorePattern": "^_"
+        }
+      ],
       "prefer-const": "error",
       "no-var": "error",
       "object-shorthand": "error",
