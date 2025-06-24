@@ -28,7 +28,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Load environment variables from project root
-dotenv.config({ path: path.resolve(__dirname, '../../.env') });
+dotenv.config({ path: path.resolve(__dirname, '../.env') });
 
 // Environment configuration
 const NODE_ENV = process.env.NODE_ENV || 'development';
@@ -116,7 +116,7 @@ const reactionLimiter = rateLimit({
 const speedLimiter = slowDown({
   windowMs: 15 * 60 * 1000, // 15 minutes
   delayAfter: IS_DEVELOPMENT ? 1000 : 50, // allow 50 requests per 15 minutes at full speed, then...
-  delayMs: 500, // add 500ms of delay per request after delayAfter
+  delayMs: () => 500, // всегда добавлять 500 ms задержки
   maxDelayMs: 20000, // max delay of 20 seconds
 });
 

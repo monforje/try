@@ -9,10 +9,8 @@ export default {
     slug: 'balanced-news-app',
     version: '1.0.0',
     orientation: 'portrait',
-    icon: './assets/icon.png',
     userInterfaceStyle: 'automatic',
     splash: {
-      image: './assets/splash.png',
       resizeMode: 'contain',
       backgroundColor: '#ffffff'
     },
@@ -38,7 +36,6 @@ export default {
     },
     android: {
       adaptiveIcon: {
-        foregroundImage: './assets/adaptive-icon.png',
         backgroundColor: '#FFFFFF'
       },
       package: IS_DEV ? 'com.balancednews.app.dev' : 'com.balancednews.app',
@@ -58,7 +55,7 @@ export default {
     ],
     extra: {
       // API Configuration
-      API_BASE_URL: process.env.API_BASE_URL || 'http://localhost:3001',
+      API_BASE_URL: process.env.API_BASE_URL || 'https://jjtau3-185-247-185-62.ru.tuna.am',
       
       // Environment flags
       IS_DEV: IS_DEV,

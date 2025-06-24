@@ -18,7 +18,7 @@ import Constants from 'expo-constants';
 
 // Базовый URL API из конфигурации Expo (.env)
 const API_BASE_URL =
-  Constants.expoConfig?.extra?.API_BASE_URL || 'http://localhost:3001';
+  Constants.expoConfig?.extra?.API_BASE_URL || 'https://jjtau3-185-247-185-62.ru.tuna.am';
 
 // Константы для таймаутов и retry
 const FETCH_TIMEOUT = 20000;

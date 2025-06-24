@@ -18,7 +18,7 @@ import Constants from 'expo-constants';
 
 // Базовый URL API из конфигурации Expo (.env)
 const API_BASE_URL =
-  Constants.expoConfig?.extra?.API_BASE_URL || 'http://localhost:3001';
+  Constants.expoConfig?.extra?.API_BASE_URL || 'https://jjtau3-185-247-185-62.ru.tuna.am';
 
 // Константы
 const FETCH_TIMEOUT = 15000;
@@ -287,7 +287,6 @@ export default function FeedScreen({ navigation }) {
           style={styles.cardImage}
           resizeMode="cover"
           onError={(e) => console.log('Image load error:', e.nativeEvent.error)}
-          defaultSource={require('../assets/placeholder-image.png')} // если есть placeholder
         />
       ) : (
         <View style={styles.cardImagePlaceholder}>
